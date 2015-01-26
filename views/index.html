@@ -1,0 +1,26 @@
+<h1>Liste de tâche(s)</h1>
+
+<ul>
+{{#todolist}}
+	<li>
+		<a href="/delete/{{id}}">x</a>
+		<span>{{name}}</span>
+	</li>
+{{/todolist}}
+</ul>
+
+<ul>
+	{{#users}}
+	<li>
+		{{firstname}} {{lastname}}
+	</li>
+	{{/users}}
+</ul>
+
+<form action="/add" method="post">
+	<p>
+		<label for="newtodo">Que dois-je faire?</label>
+		<input type="text" name="newtodo" id="newtodo" autofocus />
+		<input type="submit" />
+	</p>
+</form>
